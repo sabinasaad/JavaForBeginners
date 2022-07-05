@@ -1,33 +1,10 @@
 package homework;
 
-import java.util.Objects;
+import helpers.Utils;
+
 import java.util.Random;
 
 public class HW5 {
-
-    public static void verifyResults(int expected, int actual) {
-        if (expected == actual) {
-            System.out.println("pass");
-        } else {
-            System.out.println("fail");
-        }
-    }
-
-    public static void verifyResultsString(String expected, String actual) {
-        if (Objects.equals(expected, actual)) {
-            System.out.println("pass");
-        } else {
-            System.out.println("fail");
-        }
-    }
-
-    public static void verifyResultsDouble(double expected, double actual) {
-        if (expected == actual) {
-            System.out.println("pass");
-        } else {
-            System.out.println("fail");
-        }
-    }
 
     public static String returnDayOfWeek (int x) {
         String day;
@@ -242,77 +219,77 @@ public class HW5 {
         result = Math.ceil(result / (int)Math.PI);
         System.out.println(result);
 
-        HW4.subTask(17,1);
+        Utils.task(17,1);
         int x,y;
         y = 3;
         if (y > 0) {
             x = 1;
         }
 
-        HW4.subTask(17,2);
+        Utils.task(17,2);
         double score = 89;
         if (score <= 90 && score >= 80) {
             score += 5;
         }
         System.out.println(score);
 
-        HW4.subTask(17,3);
+        Utils.task(17,3);
         boolean item;
         int i = 1;
         int v = 55;
         item = !((i<10) || (v>50));
 
-        HW4.subTask(17,4);
+        Utils.task(17,4);
         x = 17;
         boolean t174 = ((x%2 == 1)&&(x>0));
         System.out.println(t174);
 
-        HW4.subTask(17,5);
+        Utils.task(17,5);
         y = 11;
         boolean t175 = (x>0 && y>0);
         System.out.println(t175);
 
-        HW4.subTask(17,6);
+        Utils.task(17,6);
         boolean t176 = (x*y)>0;
         System.out.println(t176);
 
         // that was all random, now let's really test!
 
-        HW4.task(2);
-        verifyResultsString("Monday",returnDayOfWeek(1));
-        verifyResultsString("Friday",returnDayOfWeek(5));
-        verifyResultsString("Error. Enter a number from 1 to 7.", returnDayOfWeek(-567));
+        Utils.task(2);
+        Utils.verifyResults("Monday",returnDayOfWeek(1));
+        Utils.verifyResults("Friday",returnDayOfWeek(5));
+        Utils.verifyResults("Error. Enter a number from 1 to 7.", returnDayOfWeek(-567));
 
-        HW4.task(3);
-        verifyResults(6,returnLargestValue(2,6,3));
-        verifyResults(1000,returnLargestValue(2,6,1000));
-        verifyResults(106,returnLargestValue(-100,106,3));
+        Utils.task(3);
+        Utils.verifyResults(6,returnLargestValue(2,6,3));
+        Utils.verifyResults(1000,returnLargestValue(2,6,1000));
+        Utils.verifyResults(106,returnLargestValue(-100,106,3));
 
-        HW4.task(4);
-        verifyResults(-500,returnSmallestValue(-500,11,45));
-        verifyResults(-1045,returnSmallestValue(-500,1177,-1045));
-        verifyResults(9,returnSmallestValue(9,23,45));
+        Utils.task(4);
+        Utils.verifyResults(-500,returnSmallestValue(-500,11,45));
+        Utils.verifyResults(-1045,returnSmallestValue(-500,1177,-1045));
+        Utils.verifyResults(9,returnSmallestValue(9,23,45));
 
-        HW4.task(5);
-        verifyResultsDouble(37.7,getAverageTemp(36.5,40,38,37.1,36.9));
-        verifyResultsDouble(36.9,getAverageTemp(36.5,36,38,37.1,36.9));
-        verifyResultsDouble(37.5,getAverageTemp(36.5,40,37,37.1,36.9));
+        Utils.task(5);
+        Utils.verifyResults(37.7,getAverageTemp(36.5,40,38,37.1,36.9));
+        Utils.verifyResults(36.9,getAverageTemp(36.5,36,38,37.1,36.9));
+        Utils.verifyResults(37.5,getAverageTemp(36.5,40,37,37.1,36.9));
 
 
-        HW4.task(6);
-        verifyResultsString("10 dollars and 75 cents.", getDollarsCents(10.75));
-        verifyResultsString("10 dollars and 75 cents.", getDollarsCents(10.753));
-        verifyResultsString("100 dollars and 0 cents.", getDollarsCents(100.00));
+        Utils.task(6);
+        Utils.verifyResults("10 dollars and 75 cents.", getDollarsCents(10.75));
+        Utils.verifyResults("10 dollars and 75 cents.", getDollarsCents(10.753));
+        Utils.verifyResults("100 dollars and 0 cents.", getDollarsCents(100.00));
         System.out.println(getDollarsCents(10.753));
 
-        HW4.task(7);
-        verifyResultsString("10 kilograms and 75 grams.", getKilogramsGrams(10.075));
+        Utils.task(7);
+        Utils.verifyResults("10 kilograms and 75 grams.", getKilogramsGrams(10.075));
         System.out.println(getKilogramsGrams(10.075));
         //?? what to do ??
-        verifyResultsString("190 kilograms and 250 grams.", getKilogramsGrams(190.250));
+        Utils.verifyResults("190 kilograms and 250 grams.", getKilogramsGrams(190.250));
         System.out.println(getKilogramsGrams(190.250));
 
-        HW4.task(8);
+        Utils.task(8);
         /*Написать метод, который принимает на вход 2 параметра -  цену и количество товара
         (может быть вес товара, или количество в штуках). Алгоритм возвращает сумму покупки
         в виде десятичного числа.
@@ -321,66 +298,66 @@ public class HW5 {
         double amount = 3.5;
         double exp = price*amount;
         System.out.println(exp);
-        verifyResultsString(String.format("%.2f",exp) + " dollars",getFullPrice(price,amount));
+        Utils.verifyResults(String.format("%.2f",exp) + " dollars",getFullPrice(price,amount));
         System.out.println(getFullPrice(price,amount));
 
-        HW4.task(9);
+        Utils.task(9);
         /*Написать метод, который принимает на вход необходимые параметры, и печатает чек.
          */
         printReceipt("tomatoes", "kilogram", 6.0,2.4);
         // now how do i verify this?
 
-        HW4.task(10);
+        Utils.task(10);
         /*Написать метод, который принимает на вход количество часов работы в день
         и стоимость одного часа работы, и возвращает заработную плату в месяц.
          */
         double h = 8; //hours a day
         double r = 28.0; //rate per hour
         y = 20;//days per month
-        verifyResultsDouble(28*8*20, countSalary(h, r, y));
+        Utils.verifyResults(28*8*20, countSalary(h, r, y));
         h = 4.5;
         r = 15;
         y = 22;
-        verifyResultsDouble(4.5*15*22,countSalary(h,r,y));
+        Utils.verifyResults(4.5*15*22,countSalary(h,r,y));
 
-        HW4.task(11);
+        Utils.task(11);
         /*Написать метод, который принимает на вход необходимые параметры и печатает
         строку ведомости выдачи зарплаты сотрудникам.
          */
         String empl = "Mary Smith   ";
         double salary = countSalary(31,6,22);
-        verifyResultsString("Mary Smith   " + "                 " + salary
+        Utils.verifyResults("Mary Smith   " + "                 " + salary
                 + "\n___________________________________________________", printSalary(empl, 31,6,22));
         System.out.println(printSalary(empl, 31,6,22));
 
-        HW4.task(12);
+        Utils.task(12);
         // do it later
 
-        HW4.task(13);
+        Utils.task(13);
         /*Написать метод, который принимает на вход год рождения и возвращает ваше счастливое число.
         Счастливое число рассчитывается по формуле: сумма всех чисел, если результат больше 9,
         снова считается сумма всех чисел.
          */
         int yob = 1994;
         int expected = 23;
-        verifyResults(expected,returnLuckyNumber(yob));
+        Utils.verifyResults(expected,returnLuckyNumber(yob));
         yob = 1986;
         expected = 24;
-        verifyResults(expected,returnLuckyNumber(yob));
+        Utils.verifyResults(expected,returnLuckyNumber(yob));
         yob = 2015;
         expected = 8;
-        verifyResults(expected,returnLuckyNumber(yob));
+        Utils.verifyResults(expected,returnLuckyNumber(yob));
 
-        HW4.task(14);
+        Utils.task(14);
         // I don't have power for this
 
-        HW4.task(15);
+        Utils.task(15);
         r = 15.85;
         String expect = "15 USD 0 cents";
-        verifyResultsString(expect,roundDown(r));
+        Utils.verifyResults(expect,roundDown(r));
         System.out.println(roundDown(r));
 
-        HW4.task(16);
+        Utils.task(16);
         //maybe later...
 
 

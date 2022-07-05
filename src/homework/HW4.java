@@ -1,26 +1,8 @@
 package homework;
 
+import helpers.Utils;
+
 public class HW4 {
-
-    static String lineS = "----------";
-
-    public static void task(int num) {
-
-        System.out.println(lineS + "Task " + num +  lineS);
-    }
-
-    public static void subTask(int num, int subnum) {
-
-        System.out.println(lineS + "Task " + num + ", " + subnum + lineS);
-
-
-    }
-    public static void subTaskL(int num, String text) {
-
-        System.out.println(lineS + "Task " + num + ", " + text + lineS);
-
-
-    }
 
     public static void calcKLM (String text1, String text2, int result1, int result2) {
         System.out.println("Результат деления " + text1 + " на " + text2 + " = " + result1 + ", а остаток от деления  = "
@@ -88,55 +70,55 @@ public class HW4 {
 
 
 
-        subTask(3,1); //1) (2 = 2) И (7 = 7);
+        Utils.task(3,1); //1) (2 = 2) И (7 = 7);
 
 //        int a = 2;
 //        int b = 7;
 //        (a == a) && (b == b);
 
-        subTask(3,2);// 2) Не(15 < 3)
+        Utils.task(3,2);// 2) Не(15 < 3)
 //        a = 15;
 //        b = 3;
 //        !(a < 3);
-        subTask(3,3); //3) ("Сосна" = "Дуб") ИЛИ ("Вишня" = "Клён");
+        Utils.task(3,3); //3) ("Сосна" = "Дуб") ИЛИ ("Вишня" = "Клён");
 //        String pine = "Pine";
 //        String oak = "Oak";
 //        String cherry = "Cherry";
 //        String maple = "Maple";
 //        (pine == oak)||(cherry == maple);
-        subTask(3,4); //4) Не("Сосна" = "Дуб");
+        Utils.task(3,4); //4) Не("Сосна" = "Дуб");
 //        !(pine = oak);
-        subTask(3,5); //5) (Не(15 < 3)) И (10 > 20);
+        Utils.task(3,5); //5) (Не(15 < 3)) И (10 > 20);
 //        int c = 10;
 //        int d = 20;
 //        (!(a < b)) && (c>20);
-        subTask(3,6); // 6) ("Глаза даны, чтобы видеть") И ("Под третьим этажом находится второй этаж");
+        Utils.task(3,6); // 6) ("Глаза даны, чтобы видеть") И ("Под третьим этажом находится второй этаж");
 //        String eyes = "Eyes are given to see";
 //        String floor = "There's second floor under third floor";
 //        eyes && floor;
-        subTask(3,7); //7) (6/2 = 3) ИЛИ (7*5 = 20).
+        Utils.task(3,7); //7) (6/2 = 3) ИЛИ (7*5 = 20).
 //        c = 3;
 //        d = 20;
 //        (6/2 = c) || (7 * 5 = d);
 
-        subTask(4,1); // 1) ("В минуте 70 секунд") ИЛИ ("Работающие часы показывают время");
+        Utils.task(4,1); // 1) ("В минуте 70 секунд") ИЛИ ("Работающие часы показывают время");
 //        int second = 1;
 //        int minute = 60;
 //        String time = "A working clock shows time";
 //        (minute == second * 70) || time;
-        subTask(4,2); //2) !(28 > 7) И !(300/5 = 60);
+        Utils.task(4,2); //2) !(28 > 7) И !(300/5 = 60);
 //        a = 28;
 //        b = 7;
 //        c = 300 / 5;
 //        d = 60;
 //        !(a > b) && !(c = d);
-        subTask(4,3); // 3) ("Телевизор - электрический прибор") И ("Стекло - дерево");
+        Utils.task(4,3); // 3) ("Телевизор - электрический прибор") И ("Стекло - дерево");
 //        String tv = "television";
 //        String elAp = "electrical appliance";
 //        String gl = "glass";
 //        String wood = "wood";
 //        (tv = elAp) && (gl = wood);
-        subTask(4,4); // 4) Не((300 < 100))  → ("Жажду можно утолить водой");
+        Utils.task(4,4); // 4) Не((300 < 100))  → ("Жажду можно утолить водой");
         int aa = 300;
         int bb = 100;
         String thirst = "Жажду можно утолить водой";
@@ -144,7 +126,7 @@ public class HW4 {
             System.out.println(thirst);
         }
 
-        subTask(4,5); // 5) (75 < 81) → (88 = 88)
+        Utils.task(4,5); // 5) (75 < 81) → (88 = 88)
         aa = 75;
         bb = 81;
         int cc = 88;
@@ -154,7 +136,7 @@ public class HW4 {
             System.out.println(dd);
         }
 
-        subTaskL(5, "a");
+        Utils.task(5, "a");
         // а) Андрей старше Светы. Наташа старше Светы.
         int andrey = 34;
         int sveta = 25;
@@ -165,7 +147,7 @@ public class HW4 {
             System.out.println(false);
         }
 
-        subTaskL(5, "b");
+        Utils.task(5, "b");
         // б) На полке стоят учебники, а на столе лежат справочники.
         String place = "shelf";
         String item;
@@ -178,13 +160,13 @@ public class HW4 {
             System.out.println(item);
         }
 
-        subTaskL(5,"c"); // в) БОльшая часть детей — девочки. Остальные - мальчики.
+        Utils.task(5,"c"); // в) БОльшая часть детей — девочки. Остальные - мальчики.
 //        int girls;
 //        int boys;
 //        int kids = girls + boys;
 //        girls > boys;
 
-        task(6); // “Водительские права можно получить, только когда исполнится 16 лет.”
+        Utils.task(6); // “Водительские права можно получить, только когда исполнится 16 лет.”
         int age;
         age  = 12;
         if (age >= 16) {
@@ -193,10 +175,10 @@ public class HW4 {
             System.out.println("You have to wait until you turn 16");
         }
 
-        task(7); //”Петя не едет в автобусе, но при этом читает книгу или не смотрит в окно”
+        Utils.task(7); //”Петя не едет в автобусе, но при этом читает книгу или не смотрит в окно”
        // (!("Pete rides a bus"))&&(("Pete reads a book") || !("Pete looks in the window"))
 
-        task(8); //“Если с другом ты, это хорошо, а когда наоборот - плохо”
+        Utils.task(8); //“Если с другом ты, это хорошо, а когда наоборот - плохо”
         String youAre = "with a friend";
         String itIs;
         if (youAre == "with a friend") {
@@ -207,7 +189,7 @@ public class HW4 {
             System.out.println(itIs);
         }
 
-        task(9); //Записать выражения в виде условий if-else:
+        Utils.task(9); //Записать выражения в виде условий if-else:
         //- Если тебе больше 18 лет, то ты взрослый. Иначе, ты - ребенок.
         age = 33;
         if (age > 18) {
@@ -276,7 +258,7 @@ public class HW4 {
         }
 
         // part 2
-        task(10);//Проверьте число на четность. Если число четное, удвойте это число, иначе возведите
+        Utils.task(10);//Проверьте число на четность. Если число четное, удвойте это число, иначе возведите
         // число в квадрат.
         //        Выведите результат работы алгоритма на печать.
         //        Найдите в презентации, какой блок схеме соответствует ваш алгоритм.
@@ -291,7 +273,7 @@ public class HW4 {
         // slides 13, 14
         assertIntegerResult(25, num10);
 
-        task(11); /** Напишите алгоритм проверки возраста на соответствие условиям (if-else):
+        Utils.task(11); /** Напишите алгоритм проверки возраста на соответствие условиям (if-else):
          Голосовать можно с 18 лет
          Машину можно водить с 16 лет
          В школу можно идти с 5 лет
@@ -301,19 +283,19 @@ public class HW4 {
          */
         String youCan;
         age = 21;
-        subTaskL(11,"a");
+        Utils.task(11,"a");
         if (age >= 18) {
             youCan = "you can vote";
         } else {
             youCan = "you cannot vote";
         }
-        subTaskL(11, "b");
+        Utils.task(11, "b");
         if (age >= 16) {
             youCan += ", you can drive";
         } else {
             youCan += ", you cannot drive";
         }
-        subTaskL(11, "c");
+        Utils.task(11, "c");
         if (age >= 5) {
             youCan += ", you can go to school";
         } else {
@@ -330,7 +312,7 @@ public class HW4 {
          2 - вызвать родителей и оставить в текущем классе на второй год
          Выведите результат работы алгоритма на печать.
         */
-        task(12);
+        Utils.task(12);
         int mark;
         mark = 6;
         int year = 1;
@@ -349,7 +331,7 @@ public class HW4 {
             System.out.println("enter a correct1 mark");
         } // slide 15
 
-        task(13);
+        Utils.task(13);
         /** Напишите алгоритм программы, которая проверяет 2 числа. Программа складывает
          числа, которые делятся на 3 без остатка, и вычитает числа, которые делятся на 5 без остатка.
          Программа умножает числа, которые делятся на 2 без остатка, но если хотя бы одно число
@@ -381,7 +363,7 @@ public class HW4 {
             System.out.println("Error. Calculation impossible with these values. Enter correct1 values & try again");
         }
 
-        task(14);
+        Utils.task(14);
         /** Распечатать следующие выражения, используя метод и параметры:
          Результат деления k на l = …, а остаток от деления  = …
          Результат деления k на m = …, а остаток от деления  = …
@@ -402,7 +384,7 @@ public class HW4 {
         // нет, только показываем.
         // красивое.
 
-        task(15);
+        Utils.task(15);
         /**
          * Выполнить задание 18 из HW2 с помощью метода и параметров:
          *
@@ -417,7 +399,7 @@ public class HW4 {
         student = 21;
         giveApples(apple,student,apple/student,apple%student);
 
-        task(16);
+        Utils.task(16);
         /**
          * Выполнить задание 18 из HW2 с помощью метода и параметров:
          *
@@ -430,6 +412,8 @@ public class HW4 {
          */
        //kill me please
         //giveApples1(42,42, );
+
+
 
 
 

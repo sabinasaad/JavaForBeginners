@@ -1,7 +1,6 @@
 package homework;
 
 public class HW7_methods {
-
     public static int getAverageInt(int[] array) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
